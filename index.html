@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaishnavi - Engineering Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; color: #333; scroll-behavior: smooth; }
+
+        header {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { color: white; text-decoration: none; }
+
+        .hero {
+            height: 100vh;
+            background:
+                linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url("https://images.unsplash.com/photo-1607746882042-944635dfe10e");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 70px;
+        }
+
+        .hero h2 { font-size: 3.5rem; }
+        .hero p { font-size: 1.3rem; margin: 1rem 0 2rem; }
+
+        .btn {
+            background: #ff6b6b;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+        }
+
+        section { padding: 5rem 20px; }
+
+        .about { background: #f8f9fa; }
+        .container { max-width: 1200px; margin: auto; }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .about-img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .skill {
+            background: white;
+            padding: 1.2rem;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+
+        .project-card img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+        }
+
+        .project-content { padding: 1.5rem; }
+
+        .contact {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            text-align: center;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        @media(max-width:768px){
+            .about-content { grid-template-columns: 1fr; text-align: center; }
+            .hero h2 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <nav>
+        <h1>Vaishnavi</h1>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="home" class="hero">
+    <div>
+        <h2>Vaishnavi R.</h2>
+        <p>Engineering Student | C Programming | Web Development</p>
+        <a href="#projects" class="btn">View My Work</a>
+    </div>
+</section>
+
+<section id="about" class="about">
+    <div class="container">
+        <h2 style="text-align:center;">About Me</h2>
+
+        <div class="about-content">
+            <img
+                src="https://images.unsplash.com/photo-1544005313-94ddf0286df2"
+                alt="Professional Engineering Girl"
+                class="about-img">
+
+            <div>
+                <h3>Passionate Engineering Student</h3>
+                <p>
+                    I am a B.Tech Computer Science student with strong interest in
+                    C programming, web development, and modern UI design.
+                </p>
+
+                <div class="skills-grid">
+                    <div class="skill"><i class="fas fa-code"></i><p>C Programming</p></div>
+                    <div class="skill"><i class="fab fa-html5"></i><p>HTML & CSS</p></div>
+                    <div class="skill"><i class="fas fa-laptop-code"></i><p>Web Design</p></div>
+                    <div class="skill"><i class="fas fa-project-diagram"></i><p>Projects</p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 style="text-align:center;">My Projects</h2>
+
+        <div class="projects-grid">
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b">
+
+ alt="Fashion Website">
+                <div class="project-content">
+                    <h3>Fashion Boutique Website</h3>
+                    <p>HTML | CSS | Responsive Design</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="Web Layout Project">
+                <div class="project-content">
+                    <h3>Image Alignment Demo</h3>
+                    <p>HTML | CSS | Layout</p>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4" alt="C Programming">
+                <div class="project-content">
+                    <h3>C Programming Exercises</h3>
+                    <p>C Language | Logic | Algorithms</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h2>Get In Touch</h2>
+        <p>Let's work together!</p>
+
+        <div style="margin-top:20px;">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>© 2025 Vaishnavi | Built with HTML & CSS</p>
+</footer>
+
+</body>
+</html>
+
